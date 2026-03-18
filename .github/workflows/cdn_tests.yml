@@ -26,6 +26,8 @@ jobs:
     if: github.repository == 'mozmeao/springfield'
     runs-on: ubuntu-latest
     steps:
+      - name: test
+        run: echo "testing zizmor ${{ github.ref_name }}"
       - uses: actions/checkout@v6
         with:
           sparse-checkout: .github/actions/slack
